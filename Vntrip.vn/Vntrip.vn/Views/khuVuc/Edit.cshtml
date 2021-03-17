@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Share/_Admin.cshtml";
+}
+
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                    <li class="breadcrumb-item active">Form sửa khu vực</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+<div class="card-body pad">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Form sửa khu vực</h3>
+                </div>
+                <font color=red>
+                    @ViewData["Loi"]
+                </font>
+                <form role="form" method="POST" action="/khuVuc/Edit/@Model.ID"
+                      enctype="multipart/form-data">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="product_name">Tên khu vực</label>
+                            <input type="text" class="form-control" placeholder="Điền tên khu vực"
+                                   name="Ten" id="Ten" value="@Model.Ten">
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary">Sửa</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /.card -->
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,771 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Share/_Client.cshtml";
+}
+
+
+<head>
+    <link href="~/Content/css/style1.css" rel="stylesheet" />
+    <link href="~/Content/css/style2.css" rel="stylesheet" />
+    <link href="~/Content/css/style3.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</head>
+<body>
+    <form method="post" action="/khachSanClient/TimKiem">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></li>
+                <li data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></li>
+                <li data-bs-target="#carouselExampleDark" data-bs-slide-to="3"></li>
+                <li data-bs-target="#carouselExampleDark" data-bs-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="~/Content/Image/khachSanClient/qc1.png" class="d-block w-100" alt="..." />
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="~/Content/Image/khachSanClient/qc2.jpg" class="d-block w-100" alt="..." />
+                </div>
+                <div class="carousel-item">
+                    <img src="~/Content/Image/khachSanClient/qc3.jpg" class="d-block w-100" alt="..." />
+                </div>
+                <div class="carousel-item">
+                    <img src="~/Content/Image/khachSanClient/qc4.jpg" class="d-block w-100" alt="..." />
+                </div>
+                <div class="carousel-item">
+                    <img src="~/Content/Image/khachSanClient/qc5.jpg" class="d-block w-100" alt="..." />
+                </div>
+            </div>
+        </div>
+        <div class="slick-slider homeBanner slick-initialized">
+            <div class="slick-list">
+                <div class="slick-track" style="width:0%"></div>
+            </div>
+        </div>
+        <div class="vntSearch">
+            <div class="container">
+                <div class="vntSearch__body">
+                    <ul class="vntSearch__tab">
+                        <li class="active">
+                            <a href="/khachsanclient/index">
+                                <span>Khách sạn</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/maybayclient/index">
+                                <span>Máy bay</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="vntSearch__main">
+                        <div class="vntSearch__hotel open">
+                            <div class="vntSearch__flex">
+                                <div class="placeInput">
+                                    <p>Thành phố, địa điểm hoặc tên khách sạn</p>
+                                    <div class="inputInline">
+                                        <div class="ant-row ant-form-item ant-form-item-has-success">
+                                            <div class="ant-col ant-form-item-control">
+                                                <div class="ant-form-item-control-input">
+                                                    <div class="ant-form-item-control-input-content">
+                                                        <span class="ant-input-affix-wrapper ant-input-affix-wrapper-lg">
+                                                            <input name="key" placeholder="Nhập điểm đến, khách sạn" class="ant-input ant-input-lg" />
+                                                            @*<span class="ant-input-suffix">
+                                                                <span role="img" aria-label="search" class="anticon anticon-search">
+                                                                    <svg viewBox="64 64 896 896" focusable="false" data-icon="search" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+                                                                        <path d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0011.6 0l43.6-43.5a8.2 8.2 0 000-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z"></path>
+                                                                    </svg>
+                                                                </span>
+                                                            </span>*@
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="ant-form-item-explain ant-form-item-explain-success">
+                                                    <div role="alert"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @*<div class="suggestDefault ">
+                                        <div class="suggestDefault__header">
+                                            <div class="suggestDefault__input">
+                                                <input type="text" class="ant-input form-control" placeholder="Nhập điểm đến, khách sạn" value="" />
+                                            </div><button type="button" class="suggestDefault__close"></button>
+                                        </div><div class="suggestDefault__body"></div>
+                                    </div>*@
+                                </div>
+                                <div class="dateInput">
+                                    <p>Ngày nhận phòng / trả phòng</p>
+
+                                    <div class="inputInline">
+                                        <div class="vntDatepicker">
+                                            <div class="ant-picker ant-picker-range ant-picker-large">
+                                                <div class="ant-picker-input ant-picker-input-active">
+                                                    <input type="date" />
+                                                </div>
+                                                <div class="ant-picker-range-separator">
+                                                    <span aria-label="to" class="ant-picker-separator">
+                                                        <span role="img" aria-label="swap-right" class="anticon anticon-swap-right">
+                                                            <svg viewBox="0 0 1024 1024" focusable="false" data-icon="swap-right" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+                                                                <path d="M873.1 596.2l-164-208A32 32 0 00684 376h-64.8c-6.7 0-10.4 7.7-6.3 13l144.3 183H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h695.9c26.8 0 41.7-30.8 25.2-51.8z"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                                <div class="ant-picker-input">
+                                                    <input type="date" />
+                                                </div>
+                                                <div class="ant-picker-active-bar" style="left:0;width:0;position:absolute"></div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vntSearch__btn">
+                                    <button type="submit" class="ant-btn ant-btn-primary ant-btn-lg w100">
+                                        <span>Tìm kiếm</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="homeDownApp">
+            <div class="container">
+                <div class="homeDownApp__cont">
+                    <div class="homeDownApp__img">
+                        <img src="~/Content/Image/khachSanClient/taycamdt.png" alt="Vntrip app" />
+                    </div><div class="homeDownApp__text">
+                        <p>
+                            <span class="semibold size-16">Theo dõi chuyến bay 24/7 cùng Vntrip App</span>
+                            <span class="homeDownApp__new">Mới</span>
+                        </p>
+                        <p class="mb0">Theo dõi chuyến bay của các thành viên trong gia đình, những người thân yêu như thể bạn đang đi du lịch cùng với họ, hoặc tìm được thời điểm tốt nhất để đón họ tại sân bay</p>
+                    </div>
+                    <div class="homeDownApp__qrcode">
+                        <img src="~/Content/Image/khachSanClient/MaQR.png" alt="Qrcode" />
+                        <p class="mb0 mt5 semibold size-12">QUÉT MÃ ĐỂ TẢI ỨNG DỤNG</p>
+                    </div>
+                    <div class="homeDownApp__logo">
+                        <a target="_blank" href="https://itunes.apple.com/us/app/vntrip-at-phong-khach-san/id1046183734?ls=1&amp;mt=8" rel="noopener noreferrer">
+                            <img src="~/Content/Image/khachSanClient/appStore.png" alt="appStore" />
+                        </a>
+                        <a target="_blank" href="https://play.google.com/store/apps/details?id=vn.vntrip.hotel" rel="noopener noreferrer">
+                            <img src="~/Content/Image/khachSanClient/googlePlay.png" alt="googlePlay" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="homePlace">
+            <div class="container">
+                <h2 class="text-center mb30">ĐIỂM ĐẾN VIỆT NAM PHỔ BIẾN</h2>
+                <div class="row">
+                    <div class="homePlace__col col-xs-12 col-sm-4">
+                        <a class="homePlace__item" href="/khachsanclient/timkiem?key=Hà Nội">
+                            <img src="~/Content/Image/khachSanClient/HaNoi.png" alt="Hà Nội" />
+                            <div class="homePlace__cont">
+                                <h3>Hà Nội</h3>
+                                <div class="homePlace__list">
+                                    <ul>
+                                        <li>
+                                            <span>1000 khách sạn Hà Nội</span>
+                                        </li>
+                                        <li>
+                                            <span>Cẩm nang du lịch Hà Nội</span>
+                                        </li>
+                                        <li>
+                                            <span>Khuyến mại du lịch Hà Nội</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="homePlace__col col-xs-6 col-sm-2">
+                        <a class="homePlace__item" href="/khachsanclient/timkiem?key=Đà Nẵng">
+                            <img src="~/Content/Image/khachSanClient/DaNang.png" alt="Đà Nẵng" />
+                            <div class="homePlace__cont">
+                                <h3>Đà Nẵng</h3><div class="homePlace__list">
+                                    <ul>
+                                        <li>
+                                            <span>600 khách sạn Đà Nẵng</span>
+                                        </li>
+                                        <li>
+                                            <span>Cẩm nang du lịch Đà Nẵng</span>
+                                        </li>
+                                        <li>
+                                            <span>Khuyến mại du lịch Đà Nẵng</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="homePlace__col col-xs-6 col-sm-2">
+                        <a class="homePlace__item" href="/khachsanclient/timkiem?key=Hội An">
+                            <img src="~/Content/Image/khachSanClient/HoiAn.png" alt="Hội An" />
+                            <div class="homePlace__cont">
+                                <h3>Hội An</h3>
+                                <div class="homePlace__list">
+                                    <ul>
+                                        <li>
+                                            <span>500 khách sạn Hội An</span>
+                                        </li>
+                                        <li>
+                                            <span>Cẩm nang du lịch Hội An</span>
+                                        </li>
+                                        <li>
+                                            <span>Khuyến mại du lịch Hội An</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="homePlace__col col-xs-12 col-sm-4">
+                        <a class="homePlace__item" href="/khachsanclient/timkiem?key=TP Hồ Chí Minh">
+                            <img src="~/Content/Image/khachSanClient/TP_HCM.png" alt="Tp. Hồ Chí Minh" />
+                            <div class="homePlace__cont">
+                                <h3>Tp. Hồ Chí Minh</h3>
+                                <div class="homePlace__list">
+                                    <ul>
+                                        <li>
+                                            <span>1500 khách sạn Tp. Hồ Chí Minh</span>
+                                        </li>
+                                        <li>
+                                            <span>Cẩm nang du lịch Tp. Hồ Chí Minh</span>
+                                        </li>
+                                        <li>
+                                            <span>Khuyến mại du lịch Tp. Hồ Chí Minh</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="homePlace__col col-xs-6 col-sm-4">
+                        <a class="homePlace__item" href="/khachsanclient/timkiem?key=Phú Quốc">
+                            <img src="~/Content/Image/khachSanClient/PhuQuoc.png" alt="Phú Quốc" />
+                            <div class="homePlace__cont">
+                                <h3>Phú Quốc</h3>
+                                <div class="homePlace__list">
+                                    <ul>
+                                        <li>
+                                            <span>350 khách sạn Phú Quốc</span>
+                                        </li>
+                                        <li>
+                                            <span>Cẩm nang du lịch Phú Quốc</span>
+                                        </li>
+                                        <li>
+                                            <span>Khuyến mại du lịch Phú Quốc</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="homePlace__col col-xs-6 col-sm-4">
+                        <a class="homePlace__item" href="/khachsanclient/timkiem?key=Nha Trangg">
+                            <img src="~/Content/Image/khachSanClient/NhaTrang.png" alt="Nha Trang" />
+                            <div class="homePlace__cont">
+                                <h3>Nha Trang</h3>
+                                <div class="homePlace__list">
+                                    <ul>
+                                        <li>
+                                            <span>500 khách sạn Nha Trang</span>
+                                        </li>
+                                        <li>
+                                            <span>Cẩm nang du lịch Nha Trang</span>
+                                        </li>
+                                        <li>
+                                            <span>Khuyến mại du lịch Nha Trang</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="homePlace__col col-xs-12 col-sm-4">
+                        <a class="homePlace__item" href="/khachsanclient/timkiem?key=Đà Lạt">
+                            <img src="~/Content/Image/khachSanClient/DaLat.png" alt="Đà Lạt" />
+                            <div class="homePlace__cont">
+                                <h3>Đà Lạt</h3>
+                                <div class="homePlace__list">
+                                    <ul>
+                                        <li>
+                                            <span>500 khách sạn Đà Lạt</span>
+                                        </li>
+                                        <li>
+                                            <span>Cẩm nang du lịch Đà Lạt</span>
+                                        </li>
+                                        <li>
+                                            <span>Khuyến mại du lịch Đà Lạt</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="homePlace">
+            <div class="container">
+                <h2 class="text-center mb30">ĐIỂM ĐẾN QUỐC TẾ PHỔ BIẾN</h2>
+                <div class="row">
+                    <div class="homePlace__col col-xs-12 col-sm-8">
+                        <div class="homePlace__group">
+                            <div class="homePlace__col col-sm-12">
+                                <a href="/khachsanclient/timkiem?key=Băng Cốc" class="homePlace__item">
+                                    <img src="~/Content/Image/khachSanClient/BangKok.png" alt="Băng Cốc" />
+                                    <div class="homePlace__cont">
+                                        <h3>Băng Cốc</h3>
+                                        <div class="homePlace__list">
+                                            <ul>
+                                                <li>
+                                                    <span>2194 khách sạn Băng Cốc</span>
+                                                </li>
+                                                <li>
+                                                    <span>Cẩm nang du lịch Băng Cốc</span>
+                                                </li>
+                                                <li>
+                                                    <span>Khuyến mại du lịch Băng Cốc</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="homePlace__col col-xs-6">
+                                <a href="/khachsanclient/timkiem?key=Seoul" class="homePlace__item">
+                                    <img src="~/Content/Image/khachSanClient/Seoul.png" alt="Seoul" />
+                                    <div class="homePlace__cont">
+                                        <h3>Seoul</h3>
+                                        <div class="homePlace__list">
+                                            <ul>
+                                                <li>
+                                                    <span>1655 khách sạn Seoul</span>
+                                                </li>
+                                                <li>
+                                                    <span>Cẩm nang du lịch Seoul</span>
+                                                </li>
+                                                <li>
+                                                    <span>Khuyến mại du lịch Seoul</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="homePlace__col col-xs-6">
+                                <a href="/khachsanclient/timkiem?key=Kuala Lumpur" class="homePlace__item">
+                                    <img src="~/Content/Image/khachSanClient/Kulalumpu.png" alt="Kuala Lumpur" />
+                                    <div class="homePlace__cont">
+                                        <h3>Kuala Lumpur</h3>
+                                        <div class="homePlace__list">
+                                            <ul>
+                                                <li>
+                                                    <span>1691 khách sạn Kuala Lumpur</span>
+                                                </li>
+                                                <li>
+                                                    <span>Cẩm nang du lịch Kuala Lumpur</span>
+                                                </li>
+                                                <li>
+                                                    <span>Khuyến mại du lịch Kuala Lumpur</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="homePlace__col col-xs-12 col-sm-4 h380">
+                        <a href="/khachsanclient/timkiem?key=Singapore" class="homePlace__item">
+                            <img src="~/Content/Image/khachSanClient/Singapo.png" alt="Singapore" />
+                            <div class="homePlace__cont">
+                                <h3>Singapore</h3>
+                                <div class="homePlace__list">
+                                    <ul>
+                                        <li>
+                                            <span>443 khách sạn Singapore</span>
+                                        </li>
+                                        <li>
+                                            <span>Cẩm nang du lịch Singapore</span>
+                                        </li>
+                                        <li>
+                                            <span>Khuyến mại du lịch Singapore</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="homePrize">
+            <div class="container">
+                <h2 class="text-center mb30">VNTRIP.VN - THÀNH TỰU & GIẢI THƯỞNG</h2>
+                <div class="slick-slider homePrize__slide slick-initialized" dir="ltr">
+                    <button type="button" data-role="none" class="slick-arrow slick-prev" style="display:block">
+                        Previous
+                    </button>
+                    <div class="slick-list">
+                        <div class="slick-track" style="width:333.33333333333337%;left:-100.00000000000001%">
+                            <div data-index="-6" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width:5%">
+                                <div>
+                                    <div class="homePrize__col" tabindex="-1" style="width:100%;display:inline-block">
+                                        <div class="homePrize__item">
+                                            <div class="homePrize__img">
+                                                <div class="spriteLogo spriteLogo_hornors">
+                                                </div>
+                                            </div>
+                                            <div class="homePrize__cont">
+                                                <b class="semibold">TUYÊN DƯƠNG</b>
+                                                <p>Gương thanh niên thủ đô.Khởi nghiệp tiêu biểu</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-index="-5" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width:5%">
+                                <div>
+                                    <div class="homePrize__col" tabindex="-1" style="width:100%;display:inline-block">
+                                        <div class="homePrize__item">
+                                            <div class="homePrize__img">
+                                                <div class="spriteLogo spriteLogo_awards"></div>
+                                            </div>
+                                            <div class="homePrize__cont">
+                                                <b class="semibold">GIẢI THƯỞNG</b>
+                                                <p>The Guide Awards</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-index="-4" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width:5%">
+                                <div>
+                                    <div class="homePrize__col" tabindex="-1" style="width:100%;display:inline-block">
+                                        <div class="homePrize__item">
+                                            <div class="homePrize__img">
+                                                <div class="spriteLogo spriteLogo_top10"></div>
+                                            </div>
+                                            <div class="homePrize__cont">
+                                                <b class="semibold">TOP 10</b>
+                                                <p>Dịch vụ xuất sắc vì người tiêu dùng</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-index="-3" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width:5%">
+                                <div>
+                                    <div class="homePrize__col" tabindex="-1" style="width:100%;display:inline-block">
+                                        <div class="homePrize__item">
+                                            <div class="homePrize__img">
+                                                <div class="spriteLogo spriteLogo_gold"></div>
+                                            </div>
+                                            <div class="homePrize__cont">
+                                                <b class="semibold">BẢNG VÀNG</b>
+                                                <p>Doanh nghiệp uy tín, phát triển thịnh vượng</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-index="-2" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width:5%">
+                                <div>
+                                    <div class="homePrize__col" tabindex="-1" style="width:100%;display:inline-block">
+                                        <div class="homePrize__item">
+                                            <div class="homePrize__img">
+                                                <div class="spriteLogo spriteLogo_apell"></div>
+                                            </div>
+                                            <div class="homePrize__cont">
+                                                <b class="semibold">DANH HIỆU</b>
+                                                <p>Doanh nghiệp tiêu biểu của năm</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-index="-1" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width:5%">
+                                <div>
+                                    <div class="homePrize__col" tabindex="-1" style="width:100%;display:inline-block">
+                                        <div class="homePrize__item">
+                                            <div class="homePrize__img">
+                                                <div class="spriteLogo spriteLogo_hornors"></div>
+                                            </div>
+                                            <div class="homePrize__cont">
+                                                <b class="semibold">TUYÊN DƯƠNG</b>
+                                                <p>Gương thanh niên thủ đô. Khởi nghiệp tiêu biểu</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-index="0" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline:none;width:5%">
+                                <div>
+                                    <div class="homePrize__col" tabindex="-1" style="width:100%;display:inline-block">
+                                        <div class="homePrize__item">
+                                            <div class="homePrize__img">
+                                                <div class="spriteLogo spriteLogo_prize2"></div>
+                                            </div>
+                                            <div class="homePrize__cont">
+                                                <b class="semibold">GIẢI THƯỞNG</b>
+                                                <p>Doanh nghiệp văn hóa Việt Nam tiêu biểu</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-index="1" class="slick-slide slick-active" tabindex="-1" aria-hidden="false" style="outline:none;width:5%">
+                                <div>
+                                    <div class="homePrize__col" tabindex="-1" style="width:100%;display:inline-block">
+                                        <div class="homePrize__item">
+                                            <div class="homePrize__img">
+                                                <div class="spriteLogo spriteLogo_hornors"></div>
+                                            </div>
+                                            <div class="homePrize__cont">
+                                                <b class="semibold">TUYÊN DƯƠNG</b>
+                                                <p>Gương thanh niên thủ đô.Khởi nghiệp tiêu biểu</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-index="2" class="slick-slide slick-active" tabindex="-1" aria-hidden="false" style="outline:none;width:5%">
+                                <div>
+                                    <div class="homePrize__col" tabindex="-1" style="width:100%;display:inline-block">
+                                        <div class="homePrize__item">
+                                            <div class="homePrize__img">
+                                                <div class="spriteLogo spriteLogo_awards"></div>
+                                            </div>
+                                            <div class="homePrize__cont">
+                                                <b class="semibold">GIẢI THƯỞNG</b>
+                                                <p>The Guide Awards</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-index="3" class="slick-slide slick-active" tabindex="-1" aria-hidden="false" style="outline:none;width:5%">
+                                <div>
+                                    <div class="homePrize__col" tabindex="-1" style="width:100%;display:inline-block">
+                                        <div class="homePrize__item">
+                                            <div class="homePrize__img">
+                                                <div class="spriteLogo spriteLogo_top10"></div>
+                                            </div>
+                                            <div class="homePrize__cont">
+                                                <b class="semibold">TOP 10</b>
+                                                <p>Dịch vụ xuất sắc vì người tiêu dùng</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-index="4" class="slick-slide slick-active" tabindex="-1" aria-hidden="false" style="outline:none;width:5%">
+                                <div>
+                                    <div class="homePrize__col" tabindex="-1" style="width:100%;display:inline-block">
+                                        <div class="homePrize__item">
+                                            <div class="homePrize__img">
+                                                <div class="spriteLogo spriteLogo_gold"></div>
+                                            </div>
+                                            <div class="homePrize__cont">
+                                                <b class="semibold">BẢNG VÀNG</b>
+                                                <p>Doanh nghiệp uy tín, phát triển thịnh vượng</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-index="5" class="slick-slide slick-active" tabindex="-1" aria-hidden="false" style="outline:none;width:5%">
+                                <div>
+                                    <div class="homePrize__col" tabindex="-1" style="width:100%;display:inline-block">
+                                        <div class="homePrize__item">
+                                            <div class="homePrize__img">
+                                                <div class="spriteLogo spriteLogo_apell">
+                                                </div>
+                                            </div>
+                                            <div class="homePrize__cont">
+                                                <b class="semibold">DANH HIỆU</b>
+                                                <p>Doanh nghiệp tiêu biểu của năm</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-index="6" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline:none;width:5%">
+                                <div>
+                                    <div class="homePrize__col" tabindex="-1" style="width:100%;display:inline-block">
+                                        <div class="homePrize__item">
+                                            <div class="homePrize__img">
+                                                <div class="spriteLogo spriteLogo_hornors"></div>
+                                            </div>
+                                            <div class="homePrize__cont">
+                                                <b class="semibold">TUYÊN DƯƠNG</b>
+                                                <p>Gương thanh niên thủ đô. Khởi nghiệp tiêu biểu</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-index="7" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width:5%">
+                                <div>
+                                    <div class="homePrize__col" tabindex="-1" style="width:100%;display:inline-block">
+                                        <div class="homePrize__item">
+                                            <div class="homePrize__img">
+                                                <div class="spriteLogo spriteLogo_prize2"></div>
+                                            </div>
+                                            <div class="homePrize__cont">
+                                                <b class="semibold">GIẢI THƯỞNG</b>
+                                                <p>Doanh nghiệp văn hóa Việt Nam tiêu biểu</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-index="8" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width:5%">
+                                <div>
+                                    <div class="homePrize__col" tabindex="-1" style="width:100%;display:inline-block">
+                                        <div class="homePrize__item">
+                                            <div class="homePrize__img">
+                                                <div class="spriteLogo spriteLogo_hornors">
+                                                </div>
+                                            </div>
+                                            <div class="homePrize__cont">
+                                                <b class="semibold">TUYÊN DƯƠNG</b>
+                                                <p>Gương thanh niên thủ đô.Khởi nghiệp tiêu biểu</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-index="9" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width:5%">
+                                <div>
+                                    <div class="homePrize__col" tabindex="-1" style="width:100%;display:inline-block">
+                                        <div class="homePrize__item">
+                                            <div class="homePrize__img">
+                                                <div class="spriteLogo spriteLogo_awards"></div>
+                                            </div>
+                                            <div class="homePrize__cont">
+                                                <b class="semibold">GIẢI THƯỞNG</b>
+                                                <p>The Guide Awards</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-index="10" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width:5%">
+                                <div>
+                                    <div class="homePrize__col" tabindex="-1" style="width:100%;display:inline-block">
+                                        <div class="homePrize__item">
+                                            <div class="homePrize__img">
+                                                <div class="spriteLogo spriteLogo_top10"></div>
+                                            </div>
+                                            <div class="homePrize__cont">
+                                                <b class="semibold">TOP 10</b>
+                                                <p>Dịch vụ xuất sắc vì người tiêu dùng</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-index="11" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width:5%">
+                                <div>
+                                    <div class="homePrize__col" tabindex="-1" style="width:100%;display:inline-block">
+                                        <div class="homePrize__item">
+                                            <div class="homePrize__img">
+                                                <div class="spriteLogo spriteLogo_gold"></div>
+                                            </div>
+                                            <div class="homePrize__cont">
+                                                <b class="semibold">BẢNG VÀNG</b>
+                                                <p>Doanh nghiệp uy tín, phát triển thịnh vượng</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-index="12" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width:5%">
+                                <div>
+                                    <div class="homePrize__col" tabindex="-1" style="width:100%;display:inline-block">
+                                        <div class="homePrize__item">
+                                            <div class="homePrize__img">
+                                                <div class="spriteLogo spriteLogo_apell"></div>
+                                            </div>
+                                            <div class="homePrize__cont">
+                                                <b class="semibold">DANH HIỆU</b>
+                                                <p>Doanh nghiệp tiêu biểu của năm</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-index="13" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width:5%">
+                                <div>
+                                    <div class="homePrize__col" tabindex="-1" style="width:100%;display:inline-block">
+                                        <div class="homePrize__item">
+                                            <div class="homePrize__img">
+                                                <div class="spriteLogo spriteLogo_hornors"></div>
+                                            </div>
+                                            <div class="homePrize__cont">
+                                                <b class="semibold">TUYÊN DƯƠNG</b>
+                                                <p>Gương thanh niên thủ đô. Khởi nghiệp tiêu biểu</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" data-role="none" class="slick-arrow slick-next" style="display:block">Next</button>
+                </div>
+            </div>
+        </div>
+        <div class="homeNews">
+            <div class="container">
+                <h2 class="text-center mb30">TRUYỀN THÔNG NÓI VỀ CHÚNG TÔI</h2>
+                <div class="homeNews__cont">
+                    <div class="homeNews__col">
+                        <a href="http://vtv.vn/kinh-te/doanh-nghiep-viet-gianh-thi-phan-du-lich-truc-tuyen-20170506195725496.htm" target="_blank" rel="noopener noreferrer" class="homeNews__item">
+                            <div class="spriteLogo spriteLogo_vtv"></div>
+                        </a>
+                    </div>
+                    <div class="homeNews__col">
+                        <a href="https://kinhdoanh.vnexpress.net/tin-tuc/startup/ung-dung-dat-phong-khach-san-viet-duoc-tap-doan-thuy-sy-rot-von-3795054.html" target="_blank" rel="noopener noreferrer" class="homeNews__item">
+                            <div class="spriteLogo spriteLogo_vnexpress"></div>
+                        </a>
+                    </div>
+                    <div class="homeNews__col">
+                        <a href="http://cafebiz.vn/vntripvn-goi-von-thanh-cong-lan-3-duoc-tap-doan-thuy-sy-dinh-gia-1000-ty-dong-20180820111940602.chn" target="_blank" rel="noopener noreferrer" class="homeNews__item">
+                            <div class="spriteLogo spriteLogo_cafebiz"></div>
+                        </a>
+                    </div>
+                    <div class="homeNews__col">
+                        <a href="https://www.dealstreetasia.com/stories/vietnams-online-travel-app-vntrip-raises-third-round-from-swiss-ihag-holding-105055/" target="_blank" rel="noopener noreferrer" class="homeNews__item">
+                            <div class="spriteLogo spriteLogo_deal"></div>
+                        </a>
+                    </div>
+                    <div class="homeNews__col">
+                        <a href="http://vneconomictimes.com/article/business/vntrip-vn-secures-funding-from-swiss-investor" target="_blank" rel="noopener noreferrer" class="homeNews__item">
+                            <div class="spriteLogo spriteLogo_times">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="homeNews__col">
+                        <a href="http://thoibaonganhang.vn/ihag-holding-rot-45-trieu-usd-vao-vntripvn-79083.html" target="_blank" rel="noopener noreferrer" class="homeNews__item">
+                            <div class="spriteLogo spriteLogo_banks"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>    
+</body>

@@ -1,0 +1,400 @@
+﻿@model IPagedList<Vntrip.vn.Models.Khachsan>
+
+@using PagedList.Mvc;
+@using PagedList;
+@{
+    ViewBag.Title = "TimKiem";
+    Layout = "~/Views/Share/_Client.cshtml";
+}
+
+<head>
+    <link href="~/Content/css/style1.css" rel="stylesheet" />
+    <link href="~/Content/css/style3.css" rel="stylesheet" />
+    <link href="~/Content/css/style2.css" rel="stylesheet" />
+</head>
+<body>
+    <form method="post" action="/khachSanClient/TimKiem">
+        <div id="__next">
+            <div class="ant-spin-nested-loading">
+                <div class="ant-spin-container">
+                    <div class="pageBody">
+                        <main class="main">
+                            <section class="hotelList">
+                                <div class="hotelList__search">
+                                    <div role="button" tabindex="0" class="hotelList__search__backdrop"></div>
+
+                                    <div class="vntSearch">
+                                        <div class="container">
+                                            <div class="vntSearch__body">
+                                                <div class="vntSearch__main">
+                                                    <div class="vntSearch__hotel open">
+                                                        <div class="vntSearch__flex">
+                                                            <div class="placeInput" style="width: 450px">
+                                                                <p>Thành phố, địa điểm hoặc tên khách sạn</p>
+                                                                <div class="inputInline">
+                                                                    <div class="ant-row ant-form-item ant-form-item-has-success">
+                                                                        <div class="ant-col ant-form-item-control">
+                                                                            <div class="ant-form-item-control-input">
+                                                                                <div class="ant-form-item-control-input-content">
+                                                                                    <span class="ant-input-affix-wrapper ant-input-affix-wrapper-lg">
+                                                                                        <input type="text" name="key" placeholder="Nhập điểm đến, khách sạn" value="@ViewBag.TinhThanh" class="ant-input ant-input-lg"/>
+                                                                                        @*<span class="ant-input-suffix">
+                                                                                                <span role="img" aria-label="search" class="anticon anticon-search">
+                                                                                                    <svg viewBox="64 64 896 896" focusable="false" data-icon="search" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+                                                                                                        <path d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0011.6 0l43.6-43.5a8.2 8.2 0 000-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z"></path>
+                                                                                                    </svg>
+                                                                                                </span>
+                                                                                            </span>*@
+                                                                                    </span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="ant-form-item-explain ant-form-item-explain-success">
+                                                                                <div role="alert"></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="dateInput" style="width: 400px">
+                                                                <p>Ngày nhận phòng / trả phòng</p>
+                                                                <div class="inputInline">
+                                                                    <div class="vntDatepicker">
+                                                                        <div class="ant-picker ant-picker-range ant-picker-large">
+                                                                            <div class="ant-picker-input ant-picker-input-active" style="display: flex">
+                                                                                <input type="date" name="dtngaynhan" />
+                                                                            </div>
+                                                                            <div class="ant-picker-range-separator">
+                                                                                <span aria-label="to" class="ant-picker-separator">
+                                                                                    <span role="img" aria-label="swap-right" class="anticon anticon-swap-right">
+                                                                                        <svg viewBox="0 0 1024 1024" focusable="false" data-icon="swap-right" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+                                                                                            <path d="M873.1 596.2l-164-208A32 32 0 00684 376h-64.8c-6.7 0-10.4 7.7-6.3 13l144.3 183H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h695.9c26.8 0 41.7-30.8 25.2-51.8z"></path>
+                                                                                        </svg>
+                                                                                    </span>
+                                                                                </span>
+                                                                            </div>
+                                                                            <div class="ant-picker-input">
+                                                                                <input type="date" name="dtngaytra"/>
+                                                                            </div>
+                                                                            <div class="ant-picker-active-bar" style="left:0;width:0;position:absolute"></div>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="vntSearch__btn">
+                                                                <button type="submit" class="ant-btn ant-btn-primary ant-btn-lg w100">
+                                                                    <span>Tìm kiếm</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="hotelList__tab">
+                                    <ul>
+                                        <li>
+                                            <button>
+                                                <span>Bản đồ</span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="btnFilter">
+                                                <span>Lọc</span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="btnSort">
+                                                <span>Sắp xếp</span>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="hotelList__body">
+                                    <div class="container">
+                                        <div class="hotelList__left">
+                                            <div class="mapBox">
+                                                <img src="~/Content/Image/khachSanClient/showmap.jpg" />
+                                                <button type="button" class="btn btn_black btn_sm" onclick="window.location.href='https://www.google.com/maps';">
+                                                    <span>Xem bản đồ</span>
+                                                </button>
+                                            </div>
+                                            <div class="filterBox ">
+                                                <div class="headerPopup">
+                                                    <p>Bộ lọc</p>
+                                                    <button type="button" class="headerPopup__close">
+                                                    </button>
+                                                </div>
+                                                <div class="filterBox__body">
+                                                    <div class="filterBox__group">
+                                                        @*Xem giá*@
+                                                        <div class="filterBox__item">
+                                                            <b class="filterBox__title">Xem giá</b>
+                                                        </div>
+                                                        @*Mức giá*@
+                                                        <div class="filterBox__item">
+                                                            <b class="filterBox__title">Mức giá</b>
+
+                                                            <p style="font-size:12px">
+                                                                <input id="CbMucGia" type="checkbox" value="duoi500" />
+                                                                Dưới 500.000 ₫
+                                                            </p>
+                                                            <p style="font-size:12px">
+                                                                <input id="CbMucGia" type="checkbox" value="tu500" />
+                                                                500.000 ₫ – 1.000.000 ₫
+                                                            </p>
+                                                            <p style="font-size:12px">
+                                                                <input id="CbMucGia" type="checkbox" value="tu1000" />
+                                                                1.000.000 ₫ – 2.000.000 ₫
+                                                            </p>
+                                                            <p style="font-size:12px">
+                                                                <input id="CbMucGia" type="checkbox" value="tu2000" />
+                                                                2.000.000 ₫ – 5.000.000 ₫
+                                                            </p>
+                                                            <p style="font-size:12px">
+                                                                <input id="CbMucGia" type="checkbox" value="tren5000" />
+                                                                Trên 5.000.000 ₫
+                                                            </p>
+                                                            <div class="filterBox__cont"></div>
+                                                        </div>
+                                                        @*Xếp hạng KH*@
+                                                        <div class="filterBox__item">
+                                                            <b class="filterBox__title">Xếp hạng khách sạn</b>@*★★★★★☆☆☆☆☆*@
+                                                            <p style="font-size:22px">
+                                                                <input id="CbXepHang" type="checkbox" value="5" />☆☆☆☆☆
+                                                            </p>
+                                                            <p style="font-size:22px">
+                                                                <input id="CbXepHang" type="checkbox" value="4" />☆☆☆☆
+                                                            </p>
+                                                            <p style="font-size:22px">
+                                                                <input id="CbXepHang" type="checkbox" value="3" />☆☆☆
+                                                            </p>
+                                                            <p style="font-size:22px">
+                                                                <input id="CbXepHang" type="checkbox" value="2" />☆☆
+                                                            </p>
+                                                            <p style="font-size:22px">
+                                                                <input id="CbXepHang" type="checkbox" value="1" />☆
+                                                            </p>
+                                                            <div class="filterBox__cont"></div>
+                                                        </div>
+                                                        @*Quận huyện*@
+                                                        <div class="filterBox__item">
+                                                            <b class="filterBox__title">Quận huyện</b>
+                                                            @foreach (var item in ViewBag.QuanHuyen)
+                                                            {
+                                                                <p style="font-size:12px">
+                                                                    <input id="CbQuanHuyen" type="checkbox" />
+                                                                    @item.TenQuanHuyen
+                                                                </p>
+                                                            }
+                                                            <div class="filterBox__cont"></div>
+                                                        </div>
+                                                        @*Khu vực*@
+                                                        <div class="filterBox__item">
+                                                            <b class="filterBox__title">Khu vực</b>
+                                                            @foreach (var item in ViewBag.KhuVuc)
+                                                            {
+                                                                <p style="font-size:12px">
+                                                                    <input id="CbKhuVuc" type="checkbox" />
+                                                                    @item.TenKhuVuc
+                                                                </p>
+                                                            }
+                                                            <div class="filterBox__cont"></div>
+                                                        </div>
+                                                        @*Tiện nghi*@
+                                                        <div class="filterBox__item">
+                                                            <b class="filterBox__title">Tiện nghi khách sạn</b>
+                                                            @foreach (var item in ViewBag.TienNghi)
+                                                            {
+                                                                <p style="font-size:12px">
+                                                                    <input id="CbTienNghi" type="checkbox" />
+
+                                                                    @item.TenTienNghi
+                                                                </p>
+                                                            }
+                                                            <div class="filterBox__cont"></div>
+                                                        </div>
+                                                        @*Loại chỗ ở*@
+                                                        <div class="filterBox__item">
+                                                            <b class="filterBox__title">Loại chỗ ở</b>
+                                                            @foreach (var item in ViewBag.LoaiKS)
+                                                            {
+
+                                                                <p>
+                                                                    <input id="CbChoO" type="checkbox" />
+                                                                    @item.LoaiKhachSan
+                                                                </p>
+                                                            }
+                                                            <div class="filterBox__cont"></div>
+                                                        </div>
+                                                    </div>
+                                                    <button type="submit" class="btnLink filterBox__reset">
+                                                        <span>Đặt lại bộ lọc</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hotelList__right">
+                                            <ul class="breadcrumb">
+                                                <li><a href="/sanVeReClient/Index">Trang chủ</a></li>
+                                                <li class="active">
+                                                    Khách sạn tại @ViewBag.TinhThanh: @ViewBag.thongbaoks
+
+                                                </li>
+                                            </ul>
+                                            <h1 class="mb15">Khách sạn tại @ViewBag.TinhThanh</h1>
+                                            <div class="hotelSort ">
+                                                <div role="button" tabindex="0" class="hotelSort__backdrop"></div>
+                                                <div class="hotelSort__main">
+                                                    <div class="headerPopup">
+                                                        <p>Sắp xếp</p>
+                                                        <button type="button" class="headerPopup__close"></button>
+                                                    </div>
+                                                    <div class="row" style="font-size:13px">
+                                                        <b class="col">@ViewBag.SoLuongKS khách sạn</b>
+                                                        <div class="col">
+                                                            <input type="radio" name="xl" value="1" checked="true" /> Được gợi ý
+                                                        </div>
+                                                        <div class="col">
+                                                            <input type="radio" name="xl" value="2" />Giá thấp nhất
+                                                        </div>
+                                                        <div class="col">
+                                                            <input type="radio" name="xl" value="3" />Giá cao nhất
+                                                        </div>
+                                                        <div class="col">
+                                                            <input type="radio" name="xl" value="4" />Đánh giá cao
+                                                        </div>
+                                                        <div class="col-2.5">
+                                                            <label class="ant-checkbox-wrapper ant-checkbox-wrapper-disabled">
+                                                                <span class="ant-checkbox ant-checkbox-disabled">
+                                                                    <input type="checkbox" disabled="" checked="true" />
+                                                                </span>
+                                                                <span style="font-size:13px">Hiển thị giá<strong> 1 </strong>đêm</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>                                            
+                                            <div class="listHotel">
+                                                @foreach (var item in Model)
+                                                {
+                                                    <div class="listHotel__item" id>
+                                                        <div class="hotelItem">
+                                                            <div class="hotelItem__img">
+                                                                <img src="@item.HinhAnhKS" />
+                                                            </div>
+                                                            <div class="hotelItem__cont">
+                                                                <div class="hotelItem__left">
+                                                                    <h3 class="hotelName">@item.TenKhachSan</h3>
+                                                                    <div class="hotelAddress">
+                                                                        <div class="hotelAddress__text">
+                                                                            <p>@item.DiaChi</p>
+                                                                            @foreach (var i in ViewBag.abc)
+                                                                            {
+                                                                                if (i.ID == item.ID)
+                                                                                {
+                                                                            <p class="mb0">
+                                                                                <a href="@i.LinkKs" target="_blank">
+                                                                                    <button type="button">Xem bản đồ</button>
+                                                                                </a>
+                                                                            </p>
+                                                                                }
+                                                                            }
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="hotelItem__right">
+                                                                    <div class="hotelItem__bottom">
+
+                                                                        <div class="pricing">
+
+                                                                            <div class="pricing__current">
+                                                                                <p class="pPrice">
+
+                                                                                    @foreach (var a in ViewBag.Gia)
+                                                                                    {
+                                                                                        if (a.ID == item.ID)
+                                                                                        {
+                                                                                            @a.Gia
+                                                                                            @*string.Format("{0:N}",@a.Gia);*@
+                                                                                        }
+                                                                                    }
+                                                                                    K
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="hotelItem__btn">
+                                                                            @*/khachsanclient/timkiem?key=*@
+
+                                                                            <a href="/XemPhong/Index?key=@item.ID"  class="btn btn_orange">
+                                                                                <span>Xem phòng</span>
+                                                                            </a>
+
+                                                                        </div>
+
+                                                                        @foreach (var a in ViewBag.SoLuongP)
+                                                                        {
+                                                                            if (@a.ID == @item.ID)
+                                                                            {
+                                                                                <div class="hotelItem__amount red-1">
+                                                                                    Chỉ còn
+                                                                                    @a.SoLuongPhong
+                                                                                    phòng!
+                                                                                </div>
+                                                                            }
+                                                                        }
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            @*/khachsanclient/timkiem?key=*@
+                                                            <a class="hotelItem__link" href="/XemPhong/Index?key=@item.ID">&nbsp;</a>
+                                                        </div>
+                                                    </div>
+                                                }
+                                            </div>
+                                            @*<ul class="pagination">
+                                                    <ul class="ant-pagination" unselectable="unselectable">
+                                                        <li title="Previous Page" class="ant-pagination-prev ant-pagination-disabled" aria-disabled="true">
+                                                            <button class="ant-pagination-item-link" type="button" tabindex="-1" disabled="">
+                                                                <span role="img" aria-label="left" class="anticon anticon-left">
+                                                                    <svg viewBox="64 64 896 896" focusable="false" data-icon="left" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+                                                                        <path d="M724 218.3V141c0-6.7-7.7-10.4-12.9-6.3L260.3 486.8a31.86 31.86 0 000 50.3l450.8 352.1c5.3 4.1 12.9.4 12.9-6.3v-77.3c0-4.9-2.3-9.6-6.1-12.6l-360-281 360-281.1c3.8-3 6.1-7.7 6.1-12.6z"></path>
+                                                                    </svg>
+                                                                </span>
+                                                            </button>
+                                                        </li>
+                                                        <li title="0" class="ant-pagination-item ant-pagination-item-0 ant-pagination-disabled ant-pagination-item-disabled" tabindex="0">
+                                                            <a rel="nofollow">0</a>
+                                                        </li>
+                                                        <li title="Next Page" class="ant-pagination-next ant-pagination-disabled" aria-disabled="true">
+                                                            <button class="ant-pagination-item-link" type="button" tabindex="-1" disabled="">
+                                                                <span role="img" aria-label="right" class="anticon anticon-right">
+                                                                    <svg viewBox="64 64 896 896" focusable="false" data-icon="right" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+                                                                        <path d="M765.7 486.8L314.9 134.7A7.97 7.97 0 00302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 000-50.4z"></path>
+                                                                    </svg>
+                                                                </span>
+                                                            </button>
+                                                        </li>
+                                                    </ul>
+                                                </ul>*@
+                                            <div style="margin-left:0px" class="paginate">
+                                                @Html.PagedListPager(Model, page => Url.Action("TimKiem", "khachSanClient", new { page }))
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </main>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</body>
+

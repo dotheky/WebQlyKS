@@ -1,0 +1,548 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Thanh toán</title>
+    <link rel="stylesheet" href="~/Content/css/style_DatPhong.css" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <form>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        <div class="head">
+            <nav style="background-color:white">
+                <div class="container">
+                    <img src="~/Content/Image/full image/Logo.png" style="margin-left:80px; height:50px" />
+                    <img src="~/Content/Image/full image/LogoRight2.PNG" style="margin-right:80px;height:50px" align="right" />
+                </div>
+            </nav>
+        </div>
+        <br /><br />
+        <div>
+            <div class="l">
+                <div class="form">
+                    <div style="margin-left:30px">
+                        <h2>THÔNG TIN THANH TOÁN</h2>
+                        <br />
+                        <h5 style="border-bottom:orange 1px solid; width:250px">Chọn hình thức thanh toán</h5>
+                        <br />
+                        <table class="" border="1" width="700px" style="border: 1px solid rgba(0,0,0,.15);margin-top:-10px">
+                            <tr style="margin-top:10px">
+                                <td width="30px">
+                                    <div style="margin-left:20px">
+                                        <input name="Radio1" type="radio" checked="checked" />
+                                    </div>
+                                </td>
+                                <td width="60px">
+                                    <div style="margin-left:20px">
+                                        <img src="~/Content/Image/full image/Card_ND.PNG" width="60" height="60" />
+                                    </div>
+                                </td>
+                                <td>
+                                    <div style="margin-left:20px">
+                                        <h6>Thanh toán bằng Thẻ nội địa</h6>
+                                        <p>
+                                            Quý khách sẽ được chuyển đến cổng thanh toán ZaloPay để thanh toán.
+                                            <br />
+                                            Phí thanh toán:
+                                            <i style="color:red">0₫</i>
+                                        </p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <table class="" border="1" width="700px" style="border: 1px solid rgba(0,0,0,.15);margin-top:15px">
+                            <tr style="margin-top:10px">
+                                <td width="30px">
+                                    <div style="margin-left:20px">
+                                        <input name="Radio1" type="radio" />
+                                    </div>
+                                </td>
+                                <td width="60px">
+                                    <div style="margin-left:20px">
+                                        <img src="~/Content/Image/full image/Card_VS.PNG" width="60" height="60" />
+                                    </div>
+                                </td>
+                                <td>
+                                    <div style="margin-left:20px">
+                                        <h6>Thanh toán bằng Thẻ quốc tế</h6>
+                                        <p>
+                                            Quý khách sẽ được chuyển đến cổng thanh toán ZaloPay để thanh toán.
+                                            <br />
+                                            Phí thanh toán:
+                                            <i style="color:red">0₫</i>
+                                        </p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <table class="" border="1" width="700px" style="border: 1px solid rgba(0,0,0,.15);margin-top:15px">
+                            <tr style="margin-top:10px">
+                                <td width="30px">
+                                    <div style="margin-left:20px">
+                                        <input name="Radio1" type="radio" value="airpay" />
+                                    </div>
+                                </td>
+                                <td width="60px">
+                                    <div style="margin-left:20px">
+                                        <img src="~/Content/Image/full image/Card_AP.PNG" width="60" height="60" />
+                                    </div>
+                                </td>
+                                <td>
+                                    <div style="margin-left:20px">
+                                        <h6>Thanh toán bằng ví AirPay</h6>
+                                        <p>
+                                            Quý khách vui lòng cài app AirPay trước khi chọn hình thức này để thuận tiện cho việc thanh toán.
+                                            <br />
+                                            Phí thanh toán:
+                                            <i style="color:red">0₫</i>
+                                        </p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <table class="" border="1" width="700px" style="border: 1px solid rgba(0,0,0,.15);margin-top:15px">
+                            <tr style="margin-top:10px">
+                                <td width="30px">
+                                    <div style="margin-left:20px">
+                                        <input name="Radio1" type="radio" />
+                                    </div>
+                                </td>
+                                <td width="60px">
+                                    <div style="margin-left:20px">
+                                        <img src="~/Content/Image/full image/Card_ZP.PNG" width="60" height="60" />
+                                    </div>
+                                </td>
+                                <td>
+                                    <div style="margin-left:20px">
+                                        <h6>Thanh toán bằng ví ZaloPay</h6>
+                                        <p>
+                                            Quý khách sẽ được chuyển đến cổng thanh toán ZaloPay để thanh toán.
+                                            <br />
+                                            Phí thanh toán:
+                                            <i style="color:red">0₫</i>
+                                        </p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <table class="" border="1" width="700px" style="border: 1px solid rgba(0,0,0,.15);margin-top:15px">
+                            <tr style="margin-top:10px">
+                                <td width="30px">
+                                    <div style="margin-left:20px">
+                                        <input name="Radio1" type="radio" />
+                                    </div>
+                                </td>
+                                <td width="60px">
+                                    <div style="margin-left:20px">
+                                        <img src="~/Content/Image/full image/Card_MM.PNG" width="60" height="60" />
+                                    </div>
+                                </td>
+                                <td>
+                                    <div style="margin-left:20px">
+                                        <h6>Thanh toán bằng ví MoMo</h6>
+                                        <p>
+                                            Quý khách vui lòng cài app MoMo trước khi chọn hình thức này để thuận tiện cho việc thanh toán.
+                                            <br />
+                                            Phí thanh toán:
+                                            <i style="color:red">0₫</i>
+                                        </p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <table class="" border="1" width="700px" style="border: 1px solid rgba(0,0,0,.15);margin-top:15px">
+                            <tr style="margin-top:10px">
+                                <td width="30px">
+                                    <div style="margin-left:20px">
+                                        <input name="Radio1" type="radio" />
+                                    </div>
+                                </td>
+                                <td width="60px">
+                                    <div style="margin-left:20px">
+                                        <img src="~/Content/Image/full image/Card_CK.PNG" width="60" height="60" />
+                                    </div>
+                                </td>
+                                <td>
+                                    <div style="margin-left:20px">
+                                        <h6>Thanh toán chuyển khoản</h6>
+                                        <p>
+                                            Quý khách sẽ được chuyển đến cổng thanh toán ZaloPay để thanh toán.
+                                            <br />
+                                            Phí thanh toán:
+                                            <i style="color:red">0₫</i>
+                                        </p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br />
+                    <h6 style="margin-left:30px; border-bottom:1px solid orange;width:697px">
+                        Tài khoản
+                        <i>@ViewBag.tennguoidat</i> (@ViewBag.emailnguoidat) sẽ được hoàn tiền từ Vntrip.vn
+                    </h6>
+                    <br />
+                    <div style="margin-left:30px">
+                        <input id="Radio1" type="radio" checked="checked" /> Hoàn tiền Vntrip.vn:
+                        <span style="color:orange">11.229₫</span>
+                    </div>
+                    <br />
+                    <div>
+                        <p align="right" style="margin-right:10px">
+                            Bằng việc chọn thanh toán, tôi xác nhận đã đọc và đồng ý với Điều khoản và Điều kiện của Vntrip.vn
+                            <br />
+                        </p>
+                    </div>
+
+                    <div>
+                        <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="background-color:orange;color:white;float:right;border:none; height:40px;width:200px;margin-right:30px;border-radius:5px" value="TIẾP TỤC" />
+                        <!-- Button to Open the Modal -->
+                        <!-- The Modal -->
+                        <div class="modal fade" id="myModal">
+                            <div class="modal-dialog">
+                                <div class="modal-content" style="width:400px; height:200px">
+                                    <div align="center" style="margin-top:50px">
+                                        <h4 style="color:red">Thanh toán thành công!</h4>
+                                        <br />
+                                        <br />
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal" style="background-color:orange">OK</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br />
+                    <br />
+                    <div>
+                        <p align="right" style="margin-right:10px">
+                            Toàn bộ giá trị đơn hàng sẽ cần được thanh toán trước khi bạn đặt khách sạn này
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="r">
+                <div class="form1">
+                    <label id="image_room_hotel" style="width: 345px;height:180px">
+                        @foreach (var i in ViewBag.AnhPhong)
+                        {
+                            <img src="@i.linka" alt="" width="345" height="180" />
+                        }
+                    </label>
+                    <br />
+                    <div style="margin-left:20px">
+                        <table>
+                            <tr>
+                                <td colspan="2">
+                                    <h5>
+                                        @foreach (var i in ViewBag.TenKhachSan)
+                                        {
+                                            @i.TenKhachSan;
+                                        }
+                                    </h5>
+                                    @foreach (var i in ViewBag.DiaChi)
+                                    {
+                                        @i.DiaChi;
+                                    }
+                                </td>
+                            </tr>
+                            <tr style="height:30px">
+                                <td>Ngày nhận phòng</td>
+                                <td>
+                                    <label id="check-in date" style=""></label>
+                                </td>
+                            </tr>
+                            <tr style="height:30px">
+                                <td>Ngày trả phòng</td>
+                                <td>
+                                    <label id="check-out date" style=""></label>
+                                </td>
+                            </tr>
+                            <tr style="height:30px">
+                                <td>Số đêm</td>
+                                <td>
+                                    <label id="number_day" style=""></label>
+                                </td>
+                            </tr>
+                            <tr style="color:orange; font-weight:bold; height:35px">
+                                <td>
+                                    Phòng:
+                                    <label id="type_room" style=""></label>
+                                </td>
+                                <td>
+                                    @foreach (var c in ViewBag.TenPhong)
+                                    {
+                                        @c.TenPhong;
+                                    }
+                                    <label id="amount_room" style=""></label>
+                                </td>
+                            </tr>
+                            <tr style="height:30px">
+                                <td>Giá gốc chưa thuế phí</td>
+                                <td>
+                                    <h5 style="color:orange" id="giaPhong">
+                                        @foreach (var c in ViewBag.GiaPhong)
+                                        {
+                                            @c.Gia;
+                                        }K
+                                    </h5>
+                                </td>
+                            </tr>
+                            <tr style="height:40px">
+                                <td>Thuế và phí dịch vụ khách sạn</td>
+                                <td>
+                                    <label id="" style="">20K</label>
+                                </td>
+                            </tr>
+                            <tr style="height:40px">
+                                <td colspan="2">------------------------------------------------</td>
+                            </tr>
+                            <tr style="height:40px">
+                                <td>Giá khuyến mại</td>
+                                <td>
+                                    <h4 style="color:orange">
+                                        @foreach (var c in ViewBag.GiaPhong)
+                                        {
+                                            double km = 20;
+                                            km = km + @c.Gia;
+                                            <b>@km K</b>
+                                        }
+                                    </h4>
+                                </td>
+                            </tr>
+                            <tr style="border-top:1px solid black; color:orange;font-weight:bold;font-size:22px; height:80px">
+                                <td>
+                                    <p>Tổng Cộng:
+                                </td>
+                                <td>
+                                    <h3 style="color:orange">
+                                        @foreach (var c in ViewBag.GiaPhong)
+                                        {
+                                            double km = 20;
+                                            km = km + @c.Gia;
+                                            <b>@km K</b>
+                                        }
+                                    </h3>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="form2">
+                    <p style="margin-left:15px">
+                        <br />
+                        <input type="text" placeholder="Nhập mã giảm giá" value="" class="" style="height: 40px;border-radius:5px">
+                        <button type="button" class="ant-btn ant-btn-primary ant-btn-lg" style="background-color:orange;color:white;height:40px;border:none;border-radius:5px;width:80px">
+                            <span>Áp dụng</span>
+                        </button>
+                    </p>
+                </div>
+
+                <div class="form3">
+                    <br />
+                    <div style="margin-left:15px">
+                        <h6 style="border-bottom:1px solid orange; width:160px">Thông tin đặt phòng</h6>
+                        <table width="330px" style="font-size:14px">
+                            <tr style="height:30px">
+                                <td width="130px">
+                                    Người đặt phòng
+                                </td>
+                                <td>
+                                    <div align="right">
+                                        <input id="ttennguoidat" value="@ViewBag.tennguoidat" disabled="disabled" style="background-color:none;border:none;background:none;color:black;margin-right:20px;width:170px" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr style="height:30px">
+                                <td>
+                                    Số điện thoại
+                                </td>
+                                <td align="right">
+                                    <input id="tsdtnguoidat" value="@ViewBag.sdtnguoidat" disabled="disabled" style="background-color:none;border:none;background:none;color:black;margin-right:20px;width:170px" />
+                                </td>
+                            </tr>
+                            <tr style="height:30px">
+                                <td>
+                                    Email
+                                </td>
+                                <td align="right">
+                                    <input id="temailnguoidat" value="@ViewBag.emailnguoidat" disabled="disabled" style="background-color:none;border:none;background:none;color:black;margin-right:20px;width:170px" />
+                                </td>
+                            </tr>
+                            <tr style="height:30px">
+                                <td>
+                                    Người nhận phòng
+                                </td>
+                                <td align="right">
+                                    <input id="ttennguoinhan" value="@ViewBag.tennguoinhan" disabled="disabled" style="background-color:none;border:none;background:none;color:black;margin-right:20px;width:170px" />
+                                </td>
+                            </tr>
+                            <tr style="height:30px">
+                                <td>
+                                    Số điện thoại
+                                </td>
+                                <td align="right">
+                                    <input id="tsdtnguoinhan" value="@ViewBag.sdtnguoinhan" disabled="disabled" style="background-color:none;border:none;background:none;color:black;margin-right:20px;width:170px" />
+                                </td>
+                            </tr>
+                        </table>
+
+                        <span hidden="hidden" id="txtgtNguoiDat">Giới tính: @ViewBag.gtnguoidat</span>
+                        <input type="button" value="Sửa" style="float:right;border:none;background:none;margin-right:20px;color:blue" onclick="" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" />
+
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Thông tin người đặt phòng</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <table border="0" width="800px">
+                                            <tr>
+                                                <td width="100px" height="80px">
+                                                    <h6>
+                                                        Danh xưng
+                                                        <i style="color:red">*</i>
+                                                    </h6>
+                                                    <select class="box" id="" style="width:80px">
+                                                        <option value="1"> Anh</option>
+                                                        <option value="2"> Chị</option>
+                                                        <option value="3"> Khác</option>
+                                                    </select>
+                                                </td>
+                                                <td colspan="2">
+                                                    <h6>
+                                                        Họ và tên
+                                                        <i style="color:red">*</i>
+                                                    </h6>
+                                                    <input onkeyup="onKeyUp()" value="@ViewBag.tennguoidat" id="stennguoidat" type="text" class="box" aria-label="Text input with dropdown button" placeholder=" Họ và tên" style="width:350px">
+                                                    <br />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <div style="margin-top:18px">
+                                                        <h6>
+                                                            Số điện thoại
+                                                            <i style="color:red">*</i>
+                                                        </h6>
+                                                        <div class="input-group mb-3" style="margin-right:20px">
+                                                            <span class="input-group-text" id="basic-addon1" style="border-bottom-left-radius:4px;border-top-left-radius:4px"> (+84) </span>
+
+                                                            <script>
+                                                                function onKeyUp() {
+                                                                    var stennguoidat = document.getElementById("stennguoidat");
+                                                                    var ssdtnguoidat = document.getElementById("ssdtnguoidat");
+                                                                    var semailnguoidat = document.getElementById("semailnguoidat");
+                                                                    var stennguoinhan = document.getElementById("stennguoinhan");
+                                                                    var ssdtnguoinhan = document.getElementById("ssdtnguoinhan");
+
+                                                                    var ttennguoidat = document.getElementById("ttennguoidat");
+                                                                    var tsdtnguoidat = document.getElementById("tsdtnguoidat");
+                                                                    var temailnguoidat = document.getElementById("temailnguoidat");
+                                                                    var ttennguoinhan = document.getElementById("ttennguoinhan");
+                                                                    var tsdtnguoinhan = document.getElementById("tsdtnguoinhan");
+
+                                                                    ttennguoidat.value = stennguoidat.value;
+                                                                    tsdtnguoidat.value = ssdtnguoidat.value;
+                                                                    temailnguoidat.value = semailnguoidat.value;
+
+                                                                    var Checkbox2 = document.getElementById("Checkbox2");
+                                                                    if (Checkbox2.checked) {
+                                                                        ttennguoinhan.value = stennguoidat.value;
+                                                                        tsdtnguoinhan.value = ssdtnguoidat.value;
+                                                                    }
+                                                                    else {
+                                                                        ttennguoinhan.value = stennguoinhan.value;
+                                                                        tsdtnguoinhan.value = ssdtnguoinhan.value;
+                                                                    }
+                                                                }
+
+                                                                function check() {
+
+                                                                }
+                                                            </script>
+
+                                                            <input onkeyup="onKeyUp()" value=" @ViewBag.sdtnguoidat" id="ssdtnguoidat" type="number" class="box" placeholder="Số điện thoại" style="width:120px" pattern="(\+84|0)\d{9}" title="Số điện thoại gồm 10 số và phải bắt đầu bằng số 0" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                                <td width="200px">
+                                                    <div class="">
+                                                        <h6>
+                                                            Email
+                                                            <i style="color:red">*</i>
+                                                        </h6>
+                                                        <input onkeyup="onKeyUp()" value="@ViewBag.emailnguoidat" id="semailnguoidat" type="email" class="box" aria-label="Text input with dropdown button" placeholder=" Email" style="width:250px; margin-right:350px">
+                                                        <br />
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3">
+                                                    <input onchange="onKeyUp()" id="Checkbox2" class="btn btn-primary" type="checkbox" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" value="true" checked="checked" /> Tôi là người nhận phòng
+                                                    <br />
+                                                    <div class="collapse" id="collapseExample">
+                                                        <div class="card card-body" style="border:none;background:none;margin-right:-45px">
+                                                            <table border="0">
+                                                                <tr>
+                                                                    <td colspan="2">
+                                                                        <h6 style="border-bottom:1px solid orange;width:230px">Thông tin người nhận phòng 1</h6>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td width="200px">
+                                                                        <div style="margin-bottom:5px">
+                                                                            <h6>Họ và tên</h6>
+                                                                            <input onkeyup="onKeyUp()" value="@ViewBag.tennguoinhan" id="stennguoinhan" type="text" class="box" aria-label="Text input with dropdown button" placeholder=" Họ và tên" style="width:180px" pattern="[a-zA-Z]+" title="Tên không bao gồm số và chữ cái đặc biệt">
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div style="margin-top:10px">
+                                                                            <h6>Số điện thoại</h6>
+                                                                            <div class="input-group mb-3" style="margin-top:0px">
+                                                                                <span class="input-group-text" id="basic-addon1"> (+84) </span>
+                                                                                <input onkeyup="onKeyUp()" value="@ViewBag.sdtnguoinhan" id="ssdtnguoinhan" type="text" class="box" placeholder="Số điện thoại" style="width:170px" pattern="(\+84|0)\d{9}" title="Số điện thoại gồm 10 số và phải bắt đầu bằng số 0" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="">Hủy</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color:orange;border-color:orange">Thay đổi</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+

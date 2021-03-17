@@ -1,0 +1,276 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Share/_Client.cshtml";
+}
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</head>
+<body>
+    <form>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></li>
+                <li data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></li>
+                <li data-bs-target="#carouselExampleDark" data-bs-slide-to="3"></li>
+                <li data-bs-target="#carouselExampleDark" data-bs-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="~/Content/Image/full image/20201211_033560_KV_dai_tiec_Widescreen1920x400.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="~/Content/Image/full image/20201120_362830_hoanhuy24h_ver2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="~/Content/Image/full image/20201027_279350_Widescreen1920x400_KVdonggia.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="~/Content/Image/full image/20201120_388550_Widescreen1920x400.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="~/Content/Image/full image/20201027_038430_Widescreen1920x400_memberdeal.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleDark" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleDark" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
+        </div>
+
+        <div id="action">
+            <table align="center" style="width:1100px" cellspacing="100" cellpadding="100" border="0">
+                <tr>
+                    <td colspan="6" height="25px">
+                        <span class="glyphicon glyphicon-home"><a style="font-size:15px; text-decoration:none" href=""> Khách sạn</a></span>&nbsp;&nbsp;&nbsp;
+                        <span class="glyphicon glyphicon-plane"><a style="font-size:15px; text-decoration:none" href=""> Máy Bay</a> </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6" height="25px">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <p" class="form-check-label" for="flexRadioDefault1">
+                                Một chiều
+                            </p">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <p" class="form-check-label" for="flexRadioDefault2">
+                                Khứ hồi
+                            </p">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="250px" height="25px">Điểm khởi hành<br /><input class="form-control me-2" type="search" placeholder="Điểm khởi hành" aria-label="Search" style="width:240px"></td>
+                    <td width="30px"><br /><img src="~/Content/Image/full image/images.png" style="width:20px; height:20px" /></td>
+                    <td width="250px">Điểm đến<br /><input class="form-control me-2" type="search" placeholder="Điểm đến" aria-label="Search" style="width:240px"></td>
+                    <td width="250px">Ngày đi/Ngày về<br /><input class="form-control me-2" type="search" placeholder="Ngày đi/Ngày về" aria-label="Search" style="width:240px"></td>
+                    <td width="250px">Hành khách<br /><input class="form-control me-2" type="search" placeholder="Hành khách" aria-label="Search" style="width:240px"></td>
+                    <td><br /><input id="Button1" type="button" value="Tìm kiếm" /></td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <table align="center" style="width:800px">
+                <tr>
+                    <td><img src="~/Content/Image/full image/image_download_app.png" /></td>
+                    <td>
+                        Theo dõi chuyến bay 24/7 cùng Vntrip App Mới<br />
+                        Theo dõi chuyến bay của các thành viên trong gia đình, những người thân yêu như thể bạn đang đi du<br />
+                        lịch cùng với họ, hoặc tìm được thời điểm tốt nhất để đón họ tại sân bay
+                    </td>
+                    <td><img src="~/Content/Image/full image/logo_QR_app.png" style="width:80px; height:80px" /><br />Quét mã để tải ứng dụng</td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <h1 align="center">KHUYẾN MÃI HOT TRONG THÁNG</h1><br />
+        </div>
+
+        <div>
+            <h1 align="center">TOP COMBO KHUYẾN MÃI: VÉ MÁY BAY & KHÁCH SẠN</h1><br />
+        </div>
+
+        <div>
+            <h1 align="center">VÉ MÁY BAY GIÁ RẺ</h1>
+            <p align="center">Giá vé 1 chiều trung bình cho một người lớn đã bao gồm thuế và phí Lưu ý giá vé liên tục thay đổi</p>
+            <table align="center">
+                <tr>
+                    <td>
+                        <input id="Button1" type="button" value="VietJet Air" />
+                        <input id="Button1" type="button" value="Vietnam Airlines" />
+                        <input id="Button1" type="button" value="Bamboo Airways" />
+                        <input id="Button1" type="button" value="Jetstar" />
+                    </td>
+                </tr>
+            </table><br />
+        </div>
+
+        <div>
+            <h1 align="center">VÉ MÁY BAY GIÁ RẺ</h1>
+        </div>
+
+        <div>
+            <table style="margin-left:100px">
+                <tr>
+                    <td colspan="2">
+                        <h1 align="center">VNTRIP ĐỒNG HÀNH CÙNG BẠN TRONG NHỮNG CHUYẾN BAY!</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="~/Content/Image/full image/luachonhangdau.png" alt="" /></td>
+                    <td>
+                        <p>
+                            Đi du lịch thì điều quan trọng nhất chính là thoải mái. Chính vì vậy mà việc đặt vé máy bay cũng cần thật đơn giản,<br />
+                            nhanh chóng. Với Vntrip việc đặt vé máy bay của bạn chưa bao giờ dễ dàng đến thế!
+                        </p>
+                        <h1>
+                            Vntrip lắng nghe nỗi lo của bạn trước mỗi chuyến bay và cung cấp giải pháp trọn vẹn<br />
+                            dành cho bạn!
+                        </h1>
+                        <p>
+                            Thực tế cho thấy khi đặt vé máy bay, trong đầu chúng ta thường xuất hiện hàng ngàn câu hỏi như: đặt vé máy bay ở<br />
+                            đâu, thanh toán ra sao, giá vé có tốt không, thủ tục thế nào,...cùng vô vàn những câu hỏi hỏi khác. Thấu hiểu điều đó,<br />
+                            Vntrip cung cấp giải pháp trọn vẹn dành cho bạn thông qua việc đặt vé máy bay trực tuyến trên website hoặc ứng<br />
+                            dụng trên điện thoại. Toàn bộ thắc mắc của bạn sẽ được đội ngũ nhân viên tại Vntrip giải thích rõ ràng, chi tiết, tận<br />
+                            tâm giúp bạn an tâm trong mỗi chặng bay của mình. Bạn biết chính xác mình muốn đi đâu, vào thời gian nào,...Vntrip<br />
+                            cũng hiểu được điều đó. Chúng tôi giúp bạn tìm giá tốt nhất trong số hàng ngàn chuyến bay, lựa chọn những khách<br />
+                            sạn tốt nhất trong hàng ngàn khách sạn. Với Vntrip các công đoạn chuẩn bị cho chuyến đi của bạn đều được rút ngắn lại.
+                        </p>
+                        <h1>Dễ dàng so sánh vé máy bay giữa các hãng</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p>
+                            Vntrip sử dụng hệ thống GDS hiện đại nhất trong ngành du lịch để kết nối hợp tác với toàn bộ các hãng bay nội địa và quốc tế giúp hiển thị đầy đủ tất cả những chuyến bay<br />
+                            phù hợp với nhu cầu của bạn và được sắp xếp theo thứ tự bạn ưu tiên. Đồng thời giúp bạn dễ dàng so sánh về giá vé.
+                            <h1>Mức giá hiển thị là giá cuối cùng</h1>
+                        <p>
+                            Mỗi chặng bay sẽ có độ chênh lệch lớn về giá vì chính sách giá là khác nhau giữa các hãng bay, điều đó khiến bạn phải khổ tâm tính toán. Chính vì thế mà mức giá hiển thị khi<br />
+                            bạn đặt vé tại Vntrip chính là mức giá cuối cùng mà bạn phải thanh toán (giá đã bao gồm tiền vé, thuế, phụ phí khác)
+                        </p>
+                        <h1>Thông tin khuyến mãi luôn được cập nhật liên tục</h1>
+                        <p>
+                            Là đại lý cấp I của các hãng máy bay nên Vntrip sẽ luôn cập nhật liên tục các thông tin ưu đãi của hãng đến khách hàng trong thời gian sớm nhất và đầy đủ nhất. Khách hàng sẽ<br />
+                            không bỏ lỡ cơ hội tham gia các chương trình: " Thứ 5 rực rỡ", "Mùa thu vàng" của Vietnam Airlines, "Ưu đãi giảm giá 50%" của Vietjet hay "Mùa Thu Vàng", "Săn vé 0 đồng" cực<br />
+                            hấp dẫn.Với Vntrip, khách hàng yên tâm tận hưởng chuyến bay với giá tốt nhất, phù hợp nhất.
+                        </p>
+                        <h1>Thanh toán an toàn và nhanh chóng</h1>
+                        <p>
+                            Việc thanh toán online đã khiến không ít người cảm thấy bất an về chất lượng. Chính vì thế chúng tôi hỗ trợ bạn thanh toán thông qua 3 phương pháp là thanh toán trực tiếp<br />
+                            qua website, chuyển khoản và thông qua đại lý. Thông tin thanh toán được lưu lại trên hệ thống để bạn dễ dàng kiểm tra và theo dõi. Các thông tin này hoàn toàn bảo mật vì<br />
+                            mục tiêu tôn trọng người dùng của Vntrip.
+                        </p>
+                        <h1>Sẵn sàng hỗ trợ mọi lúc mọi nơi</h1>
+                        <p>
+                            Đội ngũ của Vntrip làm việc 24/7, sẵn sàng hỗ trợ và giải đáp mọi thắc mắc cho bạn mỗi khi bạn cần. Cụ thể như bạn muốn hiểu hơn về quy định hành lý, muốn mua thêm cân,<br />
+                            xử lý khi điền sai thông tin, đến trễ giờ bay,....Tất cả những vấn đề bạn gặp sẽ được đội ngũ tại Vntrip hỗ trợ tận tâm.
+                        </p>
+                        <h1>
+                            Trải nghiệm đặt vé máy bay tuyệt vời cùng Vntrip
+                        </h1>
+                        <p>
+                            Vntrip là công ty du lịch trực tuyến cung cấp nền tảng đặt vé máy bay và khách sạn hàng đầu Việt Nam - là đại lý cấp một của các hãng bay nội địa: Vietnam Airline, Bamboo<br />
+                            Airways, Vietjet, Jetstar, đồng thời kết nối với các hầu hết các hãng bay quốc tế. Vntrip sẽ luôn đồng hàng cùng bạn trong những chuyến bay bằng dịch vụ đặt vé máy bay trực<br />
+                            tuyến với vé máy bay giá rẻ & dịch vụ tư vấn chăm sóc tận tâm.<br />
+                            Nếu như trước kia, việc đặt vé máy bay đòi hỏi bạn phải thực hiện nhiều thao tác, cung cấp nhiều thông tin thì Vntrip sẽ mang đến cho bạn một nền tảng đặt vé đơn giản, thuận tiện,<br />
+                            đặt chỗ nhanh chóng chỉ với 3 cú click chuột.<br />
+                            Bước 1: Điền thông tin về điểm khởi hành, điểm đến, thời gian, số hành khách. Sau đó click vào ô “Tìm Chuyến Bay”<br />
+                            Bước 2: Tham khảo và lựa chọn chuyến bay phù hợp nhất với nhu cầu của mình. Sau đó click vào ô “Chọn Vé”<br />
+                            Bước 3: Hoàn thành các bước chọn vé, điền thông tin hành khách. Sau đó click vào ô “Tiếp tục”<br />
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div align="center">
+            <h1>NHỮNG CÂU HỎI THƯỜNG GẶP</h1>
+            <div>
+                <h1 style="background-color:white">
+                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Kinh nghiệm săn vé máy bay khuyến mãi giá rẻ? vé máy bay 0 đồng?
+                    </a>
+                </h1>
+                <div class="collapse" id="collapseExample3">
+                    <div class="card card-body">
+                        <p>
+                            Thông thường các hãng bay thường khuyến mãi vào các khung giờ cố đinh, bạn nên cập nhật thông tin để sắp<br />
+                            xếp thời gian. Ngoài ra một số trang web săn vé có tính năng lưu thông tin hoặc pop up tài khoản thanh toán để<br />
+                            rút gọn thời gian, giúp nâng cao cơ hội giữ vé và săn được vé rẻ
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h1>
+                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Đặt vé máy bay lúc nào thì có giá tốt nhất?
+                    </a>
+                </h1>
+                <div class="collapse" id="collapseExample2">
+                    <div class="card card-body">
+                        <p>
+                            Trung bình, các giao dịch tốt nhất với các chuyến bay nội địa có sẵn 70 ngày trước khi máy bay cất cánh<br />
+                            Thứ 3 được xem là ngày tốt nhất để book vé
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h1>
+                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Vì sao có vé máy bay giá rẻ như Vietjet Air, Jetstar...?
+                    </a>
+                </h1>
+                <div class="collapse" id="collapseExample1">
+                    <div class="card card-body">
+                        <p>
+                            Để tối đa hóa hiệu quả chuyến bay, các hãng bay sẵn sàng đưa ra mức giá thấp hơn nhiều cho số lượng ghế<br />
+                            trống này để nâng cao tỉ lệ lấp đầy<br />
+                            Tối giản chi phí mỗi chuyến bay: Không suất ăn miễn phí, không phương tiện giải trí, ...
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h1>
+                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Mua vé online/trực tuyến có tin cậy không?
+                    </a>
+                </h1>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        <p>
+                            Các hãng hàng không trên thế giới đang sử dụng vé điện tử vì tính tiện lợi và hữu ích của nó. Rất ít hãng hàng<br />
+                            không sử dụng vé giấy<br />
+                            Khi check in ở sân bay, bạn chỉ cần cung cấp vé điện tử kèm mã đặt chỗ và CMND cho nhân viên hãng bay để làm<br />
+                            thủ tục bay.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div>
+            <h1>Khách sạn theo tỉnh thành</h1>
+        </div>
+    </form>
+</body>
+

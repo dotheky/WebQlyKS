@@ -1,0 +1,497 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Share/_Client.cshtml";
+}
+
+<head>
+    <style>
+        .box {
+            border-radius: 5px;
+            border: 1px solid rgba(0,0,0,.15)
+        }
+    </style>
+    <link href="~/Content/css/style1.css" rel="stylesheet" />
+    <link href="~/Content/css/style3.css" rel="stylesheet" />
+    <link href="~/Content/css/style2.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Content/css/style_DatPhong.css" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/e52dd558c0.js" crossorigin="anonymous"></script>
+    <link href="~/Content/css/style_xemp.css" rel="stylesheet" />
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    
+    <div class="container">
+        <form method="post" action="/khachSanClient/TimKiem">
+            <div class="vntSearch">
+                <div class="container">
+                    <div class="vntSearch__body">
+                        <div class="vntSearch__main">
+                            <div class="vntSearch__hotel open">
+                                <div class="vntSearch__flex">
+                                    <div class="placeInput" style="width: 400px">
+                                        <p>Thành phố, địa điểm hoặc tên khách sạn</p>
+                                        <div class="inputInline">
+                                            <div class="ant-row ant-form-item ant-form-item-has-success">
+                                                <div class="ant-col ant-form-item-control">
+                                                    <div class="ant-form-item-control-input">
+                                                        <div class="ant-form-item-control-input-content">
+                                                            <span class="ant-input-affix-wrapper ant-input-affix-wrapper-lg">
+                                                                <input type="text" name="key" placeholder="Nhập điểm đến, khách sạn" value="@ViewBag.TinhThanh" class="ant-input ant-input-lg" />
+                                                                @*<span class="ant-input-suffix">
+                                                                <span role="img" aria-label="search" class="anticon anticon-search">
+                                                                    <svg viewBox="64 64 896 896" focusable="false" data-icon="search" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+                                                                        <path d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0011.6 0l43.6-43.5a8.2 8.2 0 000-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z"></path>
+                                                                    </svg>
+                                                                </span>
+                                                            </span>*@
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ant-form-item-explain ant-form-item-explain-success">
+                                                        <div role="alert"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="dateInput" style="width: 400px">
+                                        <p>Ngày nhận phòng / trả phòng</p>
+                                        <div class="inputInline">
+                                            <div class="vntDatepicker">
+                                                <div class="ant-picker ant-picker-range ant-picker-large">
+                                                    <div class="ant-picker-input ant-picker-input-active" style="display: flex">
+                                                        <input type="date" name="dtngaynhan" />
+                                                    </div>
+                                                    <div class="ant-picker-range-separator">
+                                                        <span aria-label="to" class="ant-picker-separator">
+                                                            <span role="img" aria-label="swap-right" class="anticon anticon-swap-right">
+                                                                <svg viewBox="0 0 1024 1024" focusable="false" data-icon="swap-right" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+                                                                    <path d="M873.1 596.2l-164-208A32 32 0 00684 376h-64.8c-6.7 0-10.4 7.7-6.3 13l144.3 183H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h695.9c26.8 0 41.7-30.8 25.2-51.8z"></path>
+                                                                </svg>
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                    <div class="ant-picker-input">
+                                                        <input type="date" name="dtngaytra" />
+                                                    </div>
+                                                    <div class="ant-picker-active-bar" style="left:0;width:0;position:absolute"></div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="vntSearch__btn">
+                                        <button type="submit" class="ant-btn ant-btn-primary ant-btn-lg w100">
+                                            <span>Tìm kiếm</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div style="margin-top:20px">
+            <h4>
+                <a href="/sanVeReClient/index">
+                    Trang chủ
+                </a>>
+                <a>
+                    Khách sạn tại 
+                @foreach (var i in ViewBag.TenTinhThanh)
+                    {
+                        @i.TenTinh;
+                    }                    
+                </a>>
+                @foreach (var i in ViewBag.TenKhachSan)
+                {
+                    @i.TenKhachSan;
+                }
+            </h4>
+        </div>
+        <div>
+            <h1>
+                @foreach (var i in ViewBag.TenKhachSan)
+                {
+                    @i.TenKhachSan;
+
+                }
+            </h1>
+            <p>
+                @foreach (var i in ViewBag.DiaChi)
+                {
+                    @i.DiaChi;
+
+                }
+            </p>
+        </div>
+        <div id="ha">
+
+            <div class="container">
+
+                <div class="row d-inline-flex">
+                    <!-- Gallery Item 1 -->
+                    @foreach (var i in ViewBag.AnhKhachSan)
+                    {
+                        <div class="col-sm-3">
+                            <div class="d-flex flex-column text-center border height100">
+                                <div>
+                                    <img src="@i.HinhAnhKhachSan" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    <!-- bản đồ -->
+                    <div class="col">
+                        <div class="d-flex flex-column text-center border height100">
+                            <div>
+                                <a class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="background:none;background-color:none;color:blue;border:none;margin-left:-12px"><u>Xem bản đồ</u></a>
+                                <!-- Button to Open the Modal -->
+                                <!-- The Modal -->
+                                <div class="modal fade" id="myModal">
+                                    <div class="modal-dialog" style="margin-left:400px">
+                                        <div class="modal-content" style="width:820px; height:auto">
+                                            <div class="" style="border:none">
+                                                <h5 style="margin-top:10px;margin-left:10px">
+                                                    Bản đồ khách sạn
+                                                    <button type="button" class="btn btn-danger" data-dismiss="modal" style="background-color:red;border-color:none;color:white;height:auto;float:right;margin-right:5px">X</button>
+                                                </h5>
+                                            </div>
+                                            <div align="center" style="margin-top:10px">
+                                                <div>
+                                                    <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBAaCzG3gF-9CgHyXApQaVpaQtOANYyRNI&amp;q=21.0290238,105.8484130" width="800" height="450" frameborder="0" allowfullscreen="" title="Popup google map" style="border: 0px;">
+                                                    </iframe>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div id="ngayNhan">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <p style="margin-top:5px">Ngày nhận trả phòng</p>
+                        <div class="box" style="width:400px;margin-top:-10px">
+                            <input type="date" style="border:none;margin-top:7px;margin-left:20px" value="" />&nbsp;--&nbsp;
+                            <input type="date" style="border:none" />
+                        </div>
+                    </div>
+                    <div class="col">
+                        <p style="margin-top:5px">Số phòng và khách</p>
+                        <div style="margin-top:-10px">
+                            <input type="text" name="option" style="width:330px" class="box" />
+                        </div>
+                    </div>
+                    <div class="col">
+                        <button class="box" style="background-color:green;width:150px;color:white;margin-top:35px;height:50px;font-size:15px;">
+                            Cập nhật
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="box-shadow: 0 2px 8px rgba(0,0,0,.15);">
+            @foreach (var item in Model)
+            {
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-2">
+
+                            <img src="@item.HinhAnhPhong" alt="" />
+
+                        </div>
+                        <div class="col">
+                            <h2><a href="#" data-toggle="modal" data-target="#myModalXem">@item.TenPhong</a></h2>
+                            <div class="modal fade" id="myModalXem" role="dialog">
+                                <div class="modal-dialog modal-lg">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content1">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Xem chi tiết</h4>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container-fluid">
+
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <img src="@item.HinhAnhPhong" alt="" />
+                                                    </div>
+                                                    <div class="col">
+                                                        <p>@item.MoTaChiTiet</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <i class="fas fa-bed"></i> @item.SoGiuong Giường cỡ queen &nbsp;
+                                    <i class="far fa-square"></i> Diện tích @item.DienTich &nbsp;
+                                    <i class="fas fa-air-conditioner"></i> Điều hòa &nbsp;
+                                    <i class="fas fa-smoking-ban"></i> Không hút thuốc &nbsp;
+                                    <i class="fas fa-tv"></i> TV màn hình phẳng
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <a href="#" data-toggle="modal" data-target="#myModalXem" style="text-decoration:none; color:orange;font-size:16px;">Xem chi tiết</a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col" style="font-size:18px;">
+                            <i class="fas fa-dollar-sign"></i>&nbsp;Hủy phòng&nbsp;&nbsp;
+                            <i class="fas fa-utensils"></i>&nbsp;Bữa ăn&nbsp;&nbsp;
+                            <i class="fas fa-user"></i>&nbsp;Sức chứa&nbsp;&nbsp;
+                        </div>
+                        <div class="col" style="font-size:20px;">
+                            Giá: <span style="color:orange">@item.Gia K</span>
+                        </div>
+                        <div class="col-auto">
+                            <a href="/datPhong/Index?keyp=@item.ID&Keyks=@item.IDKS">
+                                <button class="box" style="width:100px; height:40px; background-color:darkorange; color:white; text-transform:uppercase; font-size:14px">
+                                    Đặt phòng
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            }
+        </div>
+
+        <div style="box-shadow: 0 2px 8px rgba(0,0,0,.15);" class="thongtin">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 style="margin-top:20px; margin-left:10px">
+                            Thông tin về Khách sạn
+                            @foreach (var i in ViewBag.TenKhachSan)
+                            {
+                                @i.TenKhachSan;
+
+                            }
+                        </h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <h3>Mô tả khách sạn</h3>
+                    </div>
+                    <div class="col-8">
+                        @foreach (var i in ViewBag.ThongTin)
+                        {
+                            <p> @i.MoTaKs</p>
+                        }
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <h3>Tiện ích xung quanh</h3>
+                    </div>
+                    <div class="col-8">
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <h3> Thông tin cần biết</h3>
+                    </div>
+                    <div class="col-8">
+                        <p><b>Hủy đặt phòng/trả trước</b></p>
+                        <p>
+                            Nhận phòng từ: <br />
+                            Trả phòng đến: <br />
+                        </p>
+                        <p>Hủy đặt phòng/trả trước</p>
+                        <p>Các loại phòng khác nhau có thể có chính sách hủy đặt phòng và chính sách thanh toán trước khác nhau. Vui lòng kiểm tra chi tiết chính sách phòng khi chọn phòng ở phía trên</p>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div style="box-shadow: 0 2px 8px rgba(0,0,0,.15); height:auto ">
+            <!---Danh gia-->
+            <div style="margin-left:20px;margin-top:20px">
+                <div style="height:40px">
+                    <h2 style="margin-top:10px">Đánh giá <spam>Khách sạn Especen</spam> từ khách hàng Vntrip.vn</h2>
+                </div>
+                <div>
+                    <div class="row justify-content-between">
+                        <div class="col-auto">
+                            <img src="~/Content/Image/full image/LogoDanhGia.png" style="" />
+                            <p>Rất tốt</p>
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col">
+                                    Rất tốt
+                                </div>
+                                <div class="col">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 100%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    Tốt
+                                </div>
+                                <div class="col">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    Hài lòng
+                                </div>
+                                <div class="col">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    Kém
+                                </div>
+                                <div class="col">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    Rất kém
+                                </div>
+                                <div class="col">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col">
+                            <div class="row">
+                                <div class="col">
+                                    Sạch sẽ
+                                </div>
+                                <div class="col">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    Giá cả
+                                </div>
+                                <div class="col">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    Thoải mái
+                                </div>
+                                <div class="col">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    Tiện nghi
+                                </div>
+                                <div class="col">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    Vị trí
+                                </div>
+                                <div class="col">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    Nhân viên
+                                </div>
+                                <div class="col">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!---Danh gia-->
+            <!---Nhan xet-->
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-auto">Ảnh đại diện</div>
+                    <div class="col-auto">Tên</div>
+                    <div class="col-6">Điểm</div>
+                </div>
+                <div class="row">
+                    <div class="col">Nhận xét</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+
+
